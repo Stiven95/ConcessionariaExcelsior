@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#67713b</color>
+    <color name="colorPrimaryDark">#242631</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="background_splash">#a8a8a8</color>
+    <color name="background_login">#d7d7d7</color>
+    <color name="texto_sobre">#000</color>
+    <color name="logout">#6b0202</color>
+    <color name="pesquisar">#d7ec7b</color>
+</resources>
