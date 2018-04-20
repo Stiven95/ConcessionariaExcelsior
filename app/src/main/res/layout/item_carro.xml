@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         card_view:cardBackgroundColor="#fff"
         card_view:cardCornerRadius="10dp"
-        card_view:cardElevation="10dp"
+        card_view:cardElevation="12dp"
         card_view:cardUseCompatPadding="true">
 
         <LinearLayout

@@ -16,7 +16,8 @@
             android:id="@+id/buscaMarca"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorPrimaryDark">
+            android:textColorHint="@color/colorPrimaryDark"
+            android:theme="@style/TextLabel">
 
             <EditText
                 android:layout_width="match_parent"

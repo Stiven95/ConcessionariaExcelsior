@@ -1,5 +1,7 @@
 package concessionaria.excelsior.com.br.concessionariaexcelsior
 
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
@@ -11,6 +13,9 @@ import concessionaria.excelsior.com.br.concessionariaexcelsior.ui.sobre.SobreFra
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    var s: SharedPreferences? = null
+    var e = s?.edit()
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
@@ -24,6 +29,16 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.navigation_notifications -> {
                 changeFragment(SobreFragment())
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.navigation_logout -> {
+                s = applicationContext.getSharedPreferences("login", 0)
+                val e = s?.edit()
+
+                e?.putBoolean("validaLogin", false)?.commit()
+                val logado = Intent(this@MainActivity, LoginActivity::class.java)
+                startActivity(logado)
+                finish()
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -41,5 +56,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+
+        changeFragment(ListaCarrosFragment())
     }
 }

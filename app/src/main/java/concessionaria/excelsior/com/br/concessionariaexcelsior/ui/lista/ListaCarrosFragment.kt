@@ -36,14 +36,20 @@ class ListaCarrosFragment : Fragment() {
                     .getInstance("http://concessionariapistiven.herokuapp.com")
                     .create(CarroAPI::class.java)
 
-            api.buscarPorMarca(buscaMarca.editText?.text.toString()).enqueue(object : Callback<Carro> {
-                override fun onResponse(call: Call<Carro>?, response: Response<Carro>?) {
+            api.buscarPorMarca(buscaMarca.editText?.text.toString()).enqueue(object : Callback<List<Carro>> {
+                override fun onResponse(call: Call<List<Carro>>?, response: Response<List<Carro>>?) {
                     if(response?.isSuccessful == true) {
-                        response?.body()
+                        if(buscaMarca.editText?.text.toString().equals("")){
+                            Toast.makeText(context,
+                                    "Preencha uma marca para buscar",
+                                    Toast.LENGTH_SHORT).show()
+                        }
+                        buscaMarca.editText?.setText("")
+                        setupLista(response?.body())
                     }
                 }
 
-                override fun onFailure(call: Call<Carro>?, t: Throwable?) {
+                override fun onFailure(call: Call<List<Carro>>?, t: Throwable?) {
                     Toast.makeText(context,
                             "Carro não encontrado",
                             Toast.LENGTH_SHORT).show()

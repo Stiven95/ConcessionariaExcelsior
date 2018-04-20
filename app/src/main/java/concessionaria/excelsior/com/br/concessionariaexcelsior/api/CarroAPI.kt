@@ -11,7 +11,7 @@ interface CarroAPI {
     fun buscarCarros(): Call<List<Carro>>
 
     @GET("/carro/{marca}")
-    fun buscarPorMarca(@Query("marca") marca: String): Call<Carro>
+    fun buscarPorMarca(@Path("marca") marca: String): Call<List<Carro>>
 
     @POST("/carro")
     fun salvar(@Body carro: Carro): Call<Void>

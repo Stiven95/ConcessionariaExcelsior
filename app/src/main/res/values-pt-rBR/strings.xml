@@ -28,4 +28,6 @@
     <string name="desenvolvedor">Desenvolvido Por Stiven Oliveira Bezerra</string>
     <string name="versao">Versão do Aplicativo 1.0.0</string>
     <string name="buscar_marca">Buscar Marca</string>
+    <string name="manter">Deseja manter-se logado?</string>
+    <string name="deletar_carro">Deletar Carro</string>
 </resources>

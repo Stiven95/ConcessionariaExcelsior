@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/padding_padrao"
-    android:background="@color/background_login">
+    style="@style/Fundo">
 
     <ImageView
         android:id="@+id/ivBackLogin"
@@ -25,7 +24,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/ivBackLogin">
@@ -34,7 +33,8 @@
             android:id="@+id/usuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorPrimaryDark">
+            android:textColorHint="@color/colorPrimaryDark"
+            android:theme="@style/TextLabel">
 
             <EditText
                 android:layout_width="match_parent"
@@ -47,7 +47,8 @@
             android:id="@+id/senhaLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorPrimaryDark">
+            android:textColorHint="@color/colorPrimaryDark"
+            android:theme="@style/TextLabel">
 
             <EditText
                 android:layout_width="match_parent"
@@ -55,13 +56,18 @@
                 android:hint="@string/hint_senha"
                 android:inputType="textPassword" />
         </android.support.design.widget.TextInputLayout>
+        
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/checkLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Deseja manter-se logado?"/>
 
         <Button
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:onClick="logar"
+            android:layout_marginTop="15dp"
             android:text="@string/btn_login"
             style="@style/Botao"/>
 
@@ -70,7 +76,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:onClick="cadastra"
             android:text="@string/btn_cadastrar"
             style="@style/Botao"/>
 

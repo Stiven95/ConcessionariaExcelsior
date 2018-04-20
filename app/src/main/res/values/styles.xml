@@ -17,6 +17,11 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
+    <!-- Fundo color App!-->
+    <style name="Fundo">
+        <item name="android:background">@drawable/fundo_app</item>
+    </style>
+
     <!-- Botão !-->
     <style name="Botao">
         <item name="android:background">@drawable/botao_personalizado</item>
@@ -25,6 +30,21 @@
     <style name="BotaoPesquisar">
         <item name="android:background">@drawable/botao_pesquisar</item>
         <item name="android:textSize">@dimen/botao_tamanho_texto</item>
+    </style>
+    <style name="BotaoDeletar">
+        <item name="android:background">@drawable/botao_deletar</item>
+        <item name="android:textSize">@dimen/botao_tamanho_texto</item>
+    </style>
+
+    <!-- Label TextInput !-->
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/label</item>
+        <item name="android:textSize">20sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/label</item>
+        <item name="colorControlNormal">@color/label</item>
+        <item name="colorControlActivated">@color/label</item>
     </style>
 
 

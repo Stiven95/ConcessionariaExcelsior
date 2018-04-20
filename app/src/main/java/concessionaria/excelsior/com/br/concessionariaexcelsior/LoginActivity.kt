@@ -24,24 +24,22 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         s = applicationContext.getSharedPreferences("login", 0)
-        var e = s?.edit()
+        val e = s?.edit()
 
-        if(s!!.getBoolean("login", true)){
-            val logado = Intent(this@LoginActivity, MainActivity::class.java)
-            startActivity(logado)
-            finish()
-        }
-
-        btn_login.setOnClickListener() {
+         btn_login.setOnClickListener() {
             val api = RetrofitClient.getInstance("http://concessionariapistiven.herokuapp.com").create(UsuarioAPI::class.java)
-            var login = Usuario("", usuario.editText?.text.toString(), senhaLogin.editText?.text.toString(), "")
+            val login = Usuario("", usuario.editText?.text.toString(), senhaLogin.editText?.text.toString(), "")
             api.buscarUsuario(login).enqueue(object : Callback<Usuario> {
                 override fun onResponse(call: Call<Usuario>?, response: Response<Usuario>?) {
                     if(response?.isSuccessful == true) {
                         if (response.body()?.usuario != null && !response.body()?.usuario.equals("")) {
                             try {
-                                e?.putBoolean("login", true)
-                                e?.commit()
+                                if(checkLogin.isChecked){
+                                    e?.putString("usuario", login.usuario)?.commit()
+                                    e?.putString("senha", login.senha)?.commit()
+                                    e?.putBoolean("validaLogin", true)?.commit()
+                                }
+
                                 val logado = Intent(this@LoginActivity, MainActivity::class.java)
                                 startActivity(logado)
                                 finish()

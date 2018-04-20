@@ -21,6 +21,7 @@
     <string name="cadastro_usuario">Register User</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="buscar_marca">Search Brand</string>
+    <string name="manter">Do you want to stay logged in?</string>
 
     <!-- Strings da tela de cadastro do carro!-->
     <string name="input_marca">Car Brand</string>
@@ -30,6 +31,7 @@
     <string name="input_imagem">Image URL</string>
     <string name="input_preco">Car Price</string>
     <string name="input_descricao">Car Description</string>
+    <string name="deletar_carro">Delete Car</string>
 
     <!-- Strings erro e loading !-->
     <string name="loading_spinner">Loading...</string>
