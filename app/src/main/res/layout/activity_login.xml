@@ -61,7 +61,8 @@
             android:id="@+id/checkLogin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Deseja manter-se logado?"/>
+            android:text="Deseja manter-se logado?"
+            android:buttonTint="@color/label" />
 
         <Button
             android:id="@+id/btn_login"
