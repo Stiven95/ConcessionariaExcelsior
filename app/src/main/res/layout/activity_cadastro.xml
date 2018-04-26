@@ -24,7 +24,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/ivBackLogin">
@@ -91,6 +91,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="@string/btn_cadastro"
+            style="@style/Botao"/>
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_voltar"
             style="@style/Botao"/>
 
     </LinearLayout>

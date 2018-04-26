@@ -55,6 +55,12 @@ class CadastroActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext, "Senhas são diferentes", Toast.LENGTH_LONG).show()
             }
         }
+
+        btnVoltar.setOnClickListener {
+            val voltar = Intent(this@CadastroActivity, LoginActivity::class.java)
+            startActivity(voltar)
+            finish()
+        }
     }
 
     fun validarCadastro(): Boolean {
