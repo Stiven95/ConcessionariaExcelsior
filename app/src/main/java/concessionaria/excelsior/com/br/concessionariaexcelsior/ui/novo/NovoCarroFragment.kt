@@ -56,7 +56,7 @@ class NovoCarroFragment : Fragment() {
 
                 if(carro.id.isNullOrEmpty()) {
                     val carro = Carro(null,
-                            inputMarca.editText?.text.toString(),
+                            inputMarca.editText?.text.toString().toLowerCase(),
                             inputModelo.editText?.text.toString(),
                             inputAno.editText?.text.toString().toInt(),
                             inputPlaca.editText?.text.toString(),
@@ -87,7 +87,7 @@ class NovoCarroFragment : Fragment() {
                     })
                 } else {
                     val carro = Carro(carro.id,
-                            inputMarca.editText?.text.toString(),
+                            inputMarca.editText?.text.toString().toLowerCase(),
                             inputModelo.editText?.text.toString(),
                             inputAno.editText?.text.toString().toInt(),
                             inputPlaca.editText?.text.toString(),

@@ -27,7 +27,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/lista_carros"
-            android:theme="@style/FullScreen" />
+            android:theme="@style/FullScreen" android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".CadastroActivity"
             android:label="@string/cadastro_usuario"
