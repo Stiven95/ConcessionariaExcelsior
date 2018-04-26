@@ -114,7 +114,7 @@ class NovoCarroFragment : Fragment() {
             }else{
                 Toast.makeText(context,
                         "Ano deve ter 4 caracteres e Preço deve ter entre 4 e 6 caracteres",
-                        Toast.LENGTH_SHORT).show()
+                        Toast.LENGTH_LONG).show()
             }
         }
 
